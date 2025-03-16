@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data using Form</title>
+</head>
+<body style="background-color: #2D3250;color: #ffb578;">
+    <br>
+    <fieldset style="background-color: #7077A1;">
+        <legend style="background-color: #3C0753;"><strong>Personal Data</strong></legend><br>
+
+        <form>
+            <fieldset style="background-color: #070F2B;">
+                <legend style="background-color: #2D3250;"><br><b>Your Name</b><br><br></legend>
+                <br>
+                <table style="width: 30%;">
+                    <tr>
+                        <td><label for="first_name">First Name <span style="color: red;">*</span></label></td>
+                        <td style="width: 7%;">:</td>
+                        <td><input autofocus required type="text" id="first_name" name="first_name" placeholder="Ex. Ibrahim" minlength="3" maxlength="15"></td>
+                    </tr>                 
+                    <tr>
+                        <td><label for="last_name">Last Name <span style="color: red;">*</span></label></td>
+                        <td>:</td>
+                        <td><input required type="text" id="last_name" name="last_name" placeholder="Ex. Eissa" minlength="3" maxlength="15"></td>
+                    </tr>
+                </table>
+                <br>
+            </fieldset>
+
+            <br>
+
+            <table style="width: 30%;">
+                <tr>
+                    <td><label for="phoneNumber">Phone Number</label></td>
+                    <td style="width: 7%;">:</td>
+                    <td><input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Ex. 01012345678"></td>
+                </tr>                 
+                <tr>
+                    <td><label for="email">Email <span style="color: red;">*</span></label></td>
+                    <td>:</td>
+                    <td><input required type="email" id="email" name="email" placeholder="Ex. ibrahim@gmail.com" minlength="10"></td>
+                </tr>
+                <tr>
+                    <td><label for="pass">Password <span style="color: red;">*</span></label></td>
+                    <td>:</td>
+                    <td><input required type="password" id="pass" name="password" placeholder="Enter your password" minlength="8" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td><label for="rePass">Re-Password <span style="color: red;">*</span></label></td>
+                    <td>:</td>
+                    <td><input required type="password" id="rePass" name="password" placeholder="Re-Enter your password" minlength="8" maxlength="20"></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td rowspan="2"><label>Gender</label></td>
+                    <td><input type="radio" value="male" id="male" name="gender"></td>
+                    <td><label for="male">Male</label></td>
+                </tr>
+                <tr>
+                    <td><input type="radio" value="female" id="female" name="gender"></td>
+                    <td><label for="female">Female</label></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td rowspan="3"><label>Skills</label></td>
+                    <td><input type="checkbox" value="html" id="html" name="skills"></td>
+                    <td><label for="html">HTML</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="css" id="css" name="skills"></td>
+                    <td><label for="css">CSS</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" value="js" id="js" name="skills"></td>
+                    <td><label for="js">JS</label></td>
+                </tr>
+                <tr><td><br></td></tr>
+                <tr>
+                    <td colspan="2"><label for="car">Car</label></td>
+                    <td>
+                        <select id="car" name="car">
+                            <option hidden value="noCar">choose a car...</option>
+                            <optgroup label="Toyota">
+                                <option value="toyota-corolla">Corolla</option>
+                                <option value="toyota-camry">Camry</option>
+                                <option value="toyota-supra">Supra</option>
+                            </optgroup>
+                            <optgroup label="BMW">
+                                <option value="bmw-x1">X1 SUV</option>
+                                <option value="bmw-x2">X2 Coupe SUV</option>
+                                <option value="bmw-x3">X3 SUV</option>
+                            </optgroup>
+                            <optgroup label="Mercedes">
+                                <option value="mercedes-gClass">Electric G-Class SUV</option>
+                                <option value="mercedes-gleHybrid">GLE Hybrid</option>
+                                <option value="mercedes-glcHybrid">GLC Hybrid</option>
+                            </optgroup>
+                            
+
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br><br>
+            <button type="submit"><img src="./25541-9-submit-button-transparent.png" alt="submit btn" title="submit" width="100px"></button>
+        </form>
+        
+    </fieldset>
+</body>
+</html>
