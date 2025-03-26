@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: cursive;
+  /* height: 5000px; */
+}
+
+/* Head */
+.b-head{
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../Images/drew-coffman-1872.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+.b-head .b-img{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(7, 7, 7, 0.345);
+}
+
+.navbar .container{
+  max-width: 1100px;
+  margin: auto;
+  height: fit-content;
+}
+.navbar .container .img-container{
+  float: left;
+  text-align: left;
+  padding: 15px 0;
+}
+.navbar .container img{
+  width: 55%;
+}
+.navbar .container .pages ul{
+  float: right;
+  height: 100%;
+  margin: 0;
+}
+.navbar .container .pages li{
+  float: left;
+  list-style: none;
+  padding: 30px 15px ;
+}
+.navbar .container .pages li.home{
+  border-top: 3px solid #AD9667;
+  padding: 27px 15px ;
+}
+.navbar .container .pages li a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.clr{
+  clear: both;
+}
+
+/* Title */
+.b-head .title{
+  width: 60%;
+  margin: auto;
+  margin-top: 15vh;
+}
+.b-head .title .welcome{
+  font-size: 20px;
+}
+.b-head .title #title-name{
+  font-size: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+}
+.b-head .title .description{
+  font-size: 20px;
+}
+.b-head .title button{
+  font-size: 15px;
+  padding: 18px 25px;
+  margin: 5px;
+  font-weight: bold;
+  border: none;
+}
+.b-head .title .btn1{
+  background-color: #AD9667;
+  color: white;
+  border-radius: 5px;
+}
+.b-head .title .btn1 a{
+  color: white;
+  text-decoration: none;
+}
+.b-head .title .btn2{
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 16px 25px;
+}
+.b-head .title .btn2 a{
+  color: white;
+  text-decoration: none;
+}
+
+/* who we are section */
+.who-we{
+  width: 100%;
+  height: 550px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.who-we .container{
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px;
+}
+.who-we .container .img-cont{
+  display: inline-block;
+  width: 45%;
+}
+.who-we .container .img-cont img{
+  width: 100%;
+}
+.who-we .container .content{
+  width: 49%;
+  display: inline-block;
+  padding-left: 60px;
+  vertical-align: top;
+}
+.who-we .container h2{
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgba(0, 0, 0, 0.802);
+}
+.who-we .container p{
+  font-size: 15px;
+  color: rgba(77, 76, 76, 0.802);
+}
+.who-we .container .content .icons{
+  margin-top: 40px;
+}
+.who-we .container .content .icons .icon{
+  margin-top: 5px;
+}
+.who-we .container .content .icons .icon img{
+  width: 40px;
+  display: inline-block;
+  border: 1px solid rgb(214, 211, 211);
+  border-radius: 50%;
+  margin-top: 8px;
+}
+.who-we .container .content .icons .icon p{
+  display: inline-block;
+  color: rgba(77, 76, 76, 0.802);
+  vertical-align: top;
+  font-size: 15px;
+}
+
+/* Our location section*/
+.our-loc{
+  width: 100%;
+  height: 550px;
+  display: inline-block;
+  background-color: #f0eeeec6;
+}
+.our-loc .container{
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+}
+.our-loc .container .img-cont{
+  display: inline-block;
+  width: 49%;
+}
+.our-loc .container .img-cont img{
+  width: 100%;
+}
+.our-loc .container .content{
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 60px 0;
+  padding-right: 50px;
+}
+
+.our-loc .container h2{
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgba(0, 0, 0, 0.802);
+  text-align: left;
+}
+.our-loc .container p{
+  font-size: 16px;
+  color: rgba(77, 76, 76, 0.802);
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+
