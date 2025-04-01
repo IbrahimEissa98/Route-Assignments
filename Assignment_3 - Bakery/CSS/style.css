@@ -256,7 +256,7 @@ h2{
   margin-right: 25px;
 }
 .info .item2 .icon{
-  border-bottom: 1px solid rgba(86, 86, 86, 0.681);
+  border-bottom: 1px solid #565656ae;
   line-height: 1.3;
 }
 .info .item2 .last{
@@ -269,6 +269,12 @@ h2{
 }
 .info .item2 .earth img{
   width: 35px;
+}
+.info .item2 .earth{
+  background-image: linear-gradient(#403d38e1,#403d38d8),url(../Images/contact-details-map.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 .info .item2 .earth p{
   line-height: 1.7;
