@@ -1,0 +1,254 @@
+:root {
+  --inter: "Inter", sans-serif;
+  --amatic: "Amatic SC", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+  --font-first-w: #fff;
+  --font-secont-b: #000;
+  --head-color-first: #212529;
+  --head-color-second: #ce1212;
+  --hover-color: #e61414;
+  --hero-light-color: #37373f;
+  --link-color: #7f7f90;
+  --color-p: #4f4f5a;
+  --color-p-lightness: #7f7f90;
+  --inline-gap: 20px;
+  --bg-color-base: #fff;
+  --bg-color-second: #eeeeee;
+  --select-bg-color: #d85454;
+  --nav-full-bg: #ffffffb3;
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1200px) {
+  #container {
+    max-width: 1000px;
+  }
+  nav .nav-content .nav-menu {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  nav .nav-content .nav-menu label {
+    cursor: pointer;
+  }
+  nav .nav-content .change-mode {
+    margin-inline: auto 30px;
+  }
+  nav .nav-content .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--bg-color-base);
+    height: 100vh;
+    width: 0;
+    transition: 0.4s;
+    z-index: 99;
+    border-left: 2px solid rgba(128, 128, 128, 0.2);
+  }
+  nav .nav-content .nav-links li a::before {
+    content: "";
+    height: 0;
+    background-color: #fff;
+  }
+  nav .nav-content .nav-links li a {
+    display: block;
+    padding-block: 10px;
+  }
+  nav .nav-content .close-links {
+    display: block;
+    text-align: end;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--link-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  nav .nav-content .close-links:hover {
+    color: var(--font-secont-b);
+  }
+  body:has(.menu:checked) {
+    nav {
+      height: 100%;
+      background-color: var(--nav-full-bg);
+      align-items: flex-start;
+    }
+    nav .nav-content .nav-links {
+      width: 300px;
+    }
+  }
+
+  #gallery .cards {
+    max-height: 1000px;
+  }
+
+  footer .about-us {
+    order: 1;
+    width: calc(50% - 20px);
+  }
+  footer .subscribe {
+    order: 3;
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .get-in-touch {
+    order: 2;
+    width: calc(50% - 20px);
+  }
+  
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media screen and (max-width: 992px) {
+  #container {
+    max-width: 750px;
+  }
+
+  /*! header */
+  header#home .container .home-content {
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+  }
+  header#home .container .home-content > * {
+    width: 100%;
+  }
+  header#home .container .home-content .dish-photo {
+    order: -1;
+  }
+  header#home .container .home-content .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* ! chefs */
+  #chefs .cards .card {
+    width: calc(50% - 20px);
+  }
+
+  /* ! gallery */
+  #gallery .cards {
+    max-height: 1500px;
+  }
+  #gallery .cards .card {
+    width: calc(50% - 20px);
+  }
+  .card {
+    order: 10;
+  }
+  .pizza {
+    order: 0;
+  }
+  .burger {
+    order: 1;
+  }
+  .levitation-pizza {
+    order: 2;
+  }
+  .frittata {
+    order: 3;
+  }
+  .beef-steaks {
+    order: 4;
+  }
+  .crispy-fried-chicken {
+    order: 5;
+  }
+  .lyulya-kebab {
+    order: 6;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+  #container {
+    max-width: 550px;
+  }
+
+  /* ! chefs */
+  #chefs .cards .card {
+    width: 100%;
+  }
+
+  /* ! gallery */
+  #gallery .cards {
+    max-height: 5000px;
+  }
+  #gallery .cards .card {
+    width: 100%;
+  }
+  .card {
+    order: 10;
+  }
+  .pizza {
+    order: 0;
+  }
+  .burger {
+    order: 1;
+  }
+  .levitation-pizza {
+    order: 2;
+  }
+  .frittata {
+    order: 3;
+  }
+  .beef-steaks {
+    order: 4;
+  }
+  .crispy-fried-chicken {
+    order: 5;
+  }
+  .lyulya-kebab {
+    order: 6;
+  }
+
+  /* ! contact */
+  #contact .container .contact-info li {
+    width: 100%;
+  }
+  #contact .container .contact-form .row-1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  #contact .container .contact-form .row-1 input {
+    width: 100%;
+  }
+
+  /* ! footer */
+  footer .about-us {
+    order: 1;
+    width: 100%;
+  }
+  footer .subscribe {
+    order: 2;
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer .get-in-touch {
+    order: 3;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 576px) {
+  #container {
+    width: 100%;
+    padding-inline: 10px;
+  }
+
+  footer .subscribe .newsletter .send-email form {
+    flex-direction: column;
+  }
+}

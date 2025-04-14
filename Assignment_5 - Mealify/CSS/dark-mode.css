@@ -1,0 +1,43 @@
+:root:has(#mode:checked) {
+    --inter: "Inter", sans-serif;
+    --amatic: "Amatic SC", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+    --font-first-w: #000;
+    --font-secont-b: #fff;
+    --head-color-first: #fff;
+    --head-color-second: #C17E1F;
+    --hover-color: #D78C23;
+    --hero-light-color: #fff;
+    --link-color: #7f7f90;
+    --color-p: #9f9f9f;
+    --color-p-lightness: #7f7f90;
+    --inline-gap: 20px;
+    --bg-color-base: #202020;
+    --bg-color-second: #252525;
+    --select-bg-color: #926321;
+    --contact-color-1: #adadad;
+    --contact-color-2: #fff;
+    --form-outline: #c17e1f;
+    --nav-full-bg: #202020b3;
+}
+:has(.mode:checked) .change-mode .dark-mode {
+  display: none;
+}
+:has(.mode:checked) .change-mode .light-mode {
+  display: block;
+}
+body:not(body:has(:target)):has(.mode:checked) li a[href="#home"],
+:has(.home:target):has(.mode:checked) li a[href="#home"],
+:has(.contact:target):has(.mode:checked) li a[href="#contact"],
+:has(.gallery:target):has(.mode:checked) li a[href="#gallery"],
+:has(.chefs:target):has(.mode:checked) li a[href="#chefs"] {
+  color: #fff;
+  
+}
+/* :has(.mode:checked) nav .nav-links a:hover {
+  color: #fff;
+} */
+/* :has(.mode:checked):has(.menu:checked) nav .nav-content .nav-links li a:hover,
+:has(.mode:checked):has(.menu:checked) nav .nav-content .nav-links .close-links:hover {
+  color: #000;
+} */
