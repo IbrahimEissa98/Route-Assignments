@@ -1,0 +1,90 @@
+@keyframes typing1 {
+  0%{
+    content: "D";
+  }
+  1%{
+    content: "De";
+  }
+  2%{
+    content: "Designer";
+  }
+  3%{
+    content: "Designer";
+  }
+  4%{
+    content: "Designer";
+  }
+  5%{
+    content: "Designer";
+  }
+  6%{
+    content: "Designer";
+  }
+  7%{
+    content: "Designer";
+  }
+  8%{
+    content: "Designer";
+  }
+  9%{
+    content: "Designer";
+  }
+  2%{
+    content: "Designer";
+  }
+  2%{
+    content: "Designer";
+  }
+}
+
+/* Designer, Developer, Freelancer, Photographer */
+@keyframes typing {
+  0%, 42% { content: ""; }
+  1%, 41% { content: "D"; }
+  2%, 20%, 40% { content: "De"; }
+  3%, 19% { content: "Des"; }
+  4%, 18% { content: "Desi"; }
+  5%, 17% { content: "Desig"; }
+  6%, 16% { content: "Design"; }
+  7%, 15% { content: "Designe"; }
+  8%, 14% { content: "Designer"; }
+
+  21%, 39% { content: "Dev"; }
+  22%, 38% { content: "Deve"; }
+  23%, 37% { content: "Devel"; }
+  24%, 36% { content: "Develo"; }
+  25%, 35% { content: "Develop"; }
+  26%, 34% { content: "Develope"; }
+  27%, 33% { content: "Developer"; }
+  
+  40%, 64% { content: ""; }
+  41%, 63% { content: "F"; }
+  42%, 62% { content: "Fr"; }
+  43%, 61% { content: "Fre"; }
+  44%, 60% { content: "Freel"; }
+  45%, 59% { content: "Freela"; }
+  46%, 58% { content: "Freelan"; }
+  47%, 57% { content: "Freelanc"; }
+  48%, 56% { content: "Freelance"; }
+  49%, 55% { content: "Freelancer"; }
+
+  65%, 97% { content: ""; }
+  66%, 96% { content: "P"; }
+  67%, 95% { content: "Ph"; }
+  68%, 94% { content: "Pho"; }
+  69%, 93% { content: "Phot"; }
+  70%, 92% { content: "Photo"; }
+  71%, 91% { content: "Photog"; }
+  72%, 90% { content: "Photogr"; }
+  73%, 89% { content: "Photogra"; }
+  74%, 88% { content: "Photograp"; }
+  75%, 87% { content: "Photograph"; }
+  76%, 86% { content: "Photographe"; }
+  77%, 85% { content: "Photographer"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
