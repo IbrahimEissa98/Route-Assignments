@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Assignment 2</title>
+    <link
+      rel="shortcut icon"
+      href="./images/icon-dice.svg"
+      type="image/x-icon"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="container flex-center flex-column mt-5">
+      <h1 class="text-center">Quote Of The Day</h1>
+
+      <div class="row w-100">
+        <div
+          id="quote-box"
+          class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 p-4 my-5 rounded-4"
+        >
+          <div class="col-12 flex-center flex-column">
+            <button
+              class="generate-icon flex-center flex-column rounded-circle border-0"
+              onclick="generateQuote();"
+            >
+              <span class="s1 p-0 m-0">Generate</span>
+              <img
+                src="./images/icon-dice.svg"
+                alt="generate icon"
+                class="d-block m-auto my-0"
+              />
+              <span class="s2 p-0 m-0">Quote</span>
+            </button>
+
+            <img
+              class="my-4 w-100 d-block"
+              src="./images/pattern-divider-mobile.svg"
+              alt="pattern-divider-mobile"
+            />
+
+            <div id="quote-text" class="quote-text text-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

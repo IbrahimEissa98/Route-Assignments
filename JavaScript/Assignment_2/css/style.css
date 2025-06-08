@@ -1,0 +1,120 @@
+:root {
+  --Savate: "Savate", sans-serif;
+  --first-color: #202733;
+  --second-color: #313a48;
+  --neon-color: #52ffa8;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  transition: 0.3s;
+}
+body {
+  background-color: var(--first-color);
+  color: #cee3e9;
+}
+
+h1 {
+  font-family: var(--Savate);
+  font-size: 4.375rem;
+  font-weight: 900;
+  color: var(--neon-color);
+}
+
+#quote-box {
+  background-color: var(--second-color);
+  /* max-width: 37.5rem; */
+}
+
+.generate-icon {
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: var(--neon-color);
+  transition: all 0.3s;
+  color: var(--second-color);
+  font-family: var(--Savate);
+}
+
+.generate-icon span {
+  display: block;
+  transition: 0.3s;
+}
+.generate-icon .s1 {
+  transform: translateY(0.625rem);
+}
+.generate-icon .s2 {
+  transform: translateY(-0.625rem);
+}
+.generate-icon:hover .s1 {
+  transform: translateY(0);
+}
+.generate-icon:hover .s2 {
+  transform: translateY(0);
+}
+
+.generate-icon:hover {
+  box-shadow: 0 0 3.125rem 0.625rem var(--neon-color);
+}
+
+.generate-icon img {
+  transform: scale(0);
+  transition: all 0.3s;
+}
+.generate-icon:hover img {
+  transform: scale(1);
+  animation: rotation 2s 0.3s infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.quote-num {
+  color: var(--neon-color);
+  letter-spacing: 0.125rem;
+}
+
+.quote-content::before {
+  content: "\f10d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 1rem;
+  vertical-align: super;
+  color: var(--neon-color);
+}
+.quote-content::after {
+  content: "\f10e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 1rem;
+  vertical-align: super;
+  color: var(--neon-color);
+}
+
+.quote-author {
+  font-style: italic;
+  font-family: var(--Savate);
+}
+.quote-author::before,
+.quote-author::after {
+  content: "--";
+  color: var(--neon-color);
+}
