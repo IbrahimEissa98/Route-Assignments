@@ -440,21 +440,42 @@ var num2 = +window.prompt(
   "Enter second number \nto find maximum between two numbers"
 );
 
+// switch (Number.isNaN(num1) || Number.isNaN(num2)) {
+//   case true:
+//     console.log("Invalid Number");
+//     break;
+//   case false:
+//     switch (num1 > num2) {
+//       case true:
+//         console.log("Max is :" + num1);
+//         break;
+//       case false:
+//         console.log("Max is :" + num2);
+//         break;
+//     }
+//     break;
+// }
+
+// or
 switch (Number.isNaN(num1) || Number.isNaN(num2)) {
   case true:
     console.log("Invalid Number");
     break;
   case false:
-    switch (num1 > num2) {
-      case true:
+    switch (true) {
+      case num1 > num2:
         console.log("Max is :" + num1);
         break;
-      case false:
+      case num2 > num1:
         console.log("Max is :" + num2);
+        break;
+      default:
+        console.log("Both numbers are equal");
         break;
     }
     break;
 }
+
 */
 //-------------------------------------------
 /*
