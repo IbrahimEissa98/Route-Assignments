@@ -23,8 +23,8 @@ var regExpPattern = {
 // Check if there id data in the local storage
 if (localStorage.getItem("websites") != null) {
   websitesList = JSON.parse(localStorage.getItem("websites"));
-  displayWebsites(websitesList);
 }
+displayWebsites(websitesList);
 
 // Submit button click
 function addWebsite() {
