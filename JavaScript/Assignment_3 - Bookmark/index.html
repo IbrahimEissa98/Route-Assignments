@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link
+      rel="shortcut icon"
+      href="./images/bookmark.png"
+      type="image/x-icon"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Inputs Section Start -->
+    <section class="container">
+      <h1 class="text-center py-5 flex-center">
+        <span class="p-3">Bookmarker</span>
+      </h1>
+
+      <p class="sub-title text-center pt-3 fs-3">
+        <span>
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </span>
+      </p>
+
+      <div class="inputsSection rounded-5 mt-4 p-4">
+        <div class="col-12 mb-3">
+          <label for="siteName" class="my-2">
+            <i class="fa-solid fa-book-bookmark me-2"></i>
+            Site Name :
+          </label>
+          <input
+            type="text"
+            placeholder="Bookmark Name"
+            class="form-control mb-1"
+            id="siteName"
+            name="siteName"
+            oninput="validateInput(this);"
+          />
+          <div id="siteNameFeedback" class="feedback-pop d-none">
+            Website name must contain at least 1 letter and at most 15 "you can
+            use symbols" to be valid
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+          <label for="siteUrl" class="my-2">
+            <i class="fa-solid fa-link"></i>
+            Site Url :
+          </label>
+          <input
+            type="text"
+            placeholder="Website URL"
+            class="form-control mb-1"
+            id="siteUrl"
+            name="siteUrl"
+            oninput="validateInput(this);"
+          />
+          <div id="siteUrlFeedback" class="feedback-pop d-none">
+            Website URL must start with "https://" or "http://" for
+            e.g.(https://google.com) to be valid
+          </div>
+        </div>
+        <div class="col-12 pt-4">
+          <button
+            class="btn m-auto px-5 d-block fw-bold"
+            id="addWebBtn"
+            onclick="addWebsite()"
+          >
+            Add Website
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Inputs Section End -->
+
+    <!-- Search Section Start -->
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 search"
+        >
+          <input
+            id="searchInput"
+            type="search"
+            class="form-control w-100 m-auto my-5"
+            placeholder="Search by website name..."
+            oninput="search(this.value);"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Search Section End -->
+
+    <!-- Display Section Start -->
+    <section class="container mb-5">
+      <div class="websites rounded-4 overflow-hidden">
+        <table class="w-100 text-center">
+          <thead class="">
+            <th class="py-3">Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+            <th>Update</th>
+          </thead>
+          <tbody id="tBody">
+            <!-- <tr>
+              <td class="py-3">1</td>
+              <td>google</td>
+              <td>
+                <button class="btn btn-success" onclick="visit()">
+                  <i class="fa-solid fa-eye"></i> Visit
+                </button>
+              </td>
+              <td>
+                <button class="btn btn-danger" onclick="deleteWeb()">
+                  <i class="fa-solid fa-trash"></i> Delete
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-secondary"
+                  onclick="parseWebDataToInputs();"
+                >
+                  <i class="fa-solid fa-edit"></i> Update
+                </button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- Display Section End -->
+
+    <!-- Mode btn Start -->
+    <button id="mode" onclick="changeMode();">
+      <i
+        id="dark"
+        class="fa-solid fa-moon fa-fade text-dark d-none py-1 fs-3 px-1"
+      ></i>
+      <i id="light" class="fa-solid fa-sun fa-spin text-warning py-1 fs-3"></i>
+    </button>
+    <!-- Mode btn End -->
+
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 Script -->
+    <script src="./js/sweetalert2@11.js"></script>
+    <!-- Main Script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

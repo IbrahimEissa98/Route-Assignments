@@ -1,0 +1,142 @@
+:root {
+  --pacifico: "Pacifico", cursive;
+  --righteous: "Righteous", sans-serif;
+  --pTSansCaption: "PT Sans Caption", sans-serif;
+  --first-color: #293241;
+  --second-color: #3d5a80b9;
+  --third-color: #98c1d9;
+  --fc-first: #ee6c4d;
+  --fc-second: #e0fbfc;
+  --bg-before: #38639b;
+  --bg-after: #5b799e;
+  --box-shadow: rgba(255, 190, 11, 0.5);
+  --lg-first: #fb5607;
+  --lg-second: #ffbe0b;
+}
+
+/* General Styles start */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  transition: 0.5s;
+}
+::selection {
+  background-color: var(--third-color);
+  color: var(--fc-second);
+}
+body {
+  background-color: var(--first-color);
+  color: var(--fc-second);
+  font-family: var(--pTSansCaption);
+}
+/* General Styles end */
+
+/* Title start */
+h1 {
+  font-family: var(--pacifico);
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--fc-first);
+  border-bottom: 2px dotted var(--fc-first);
+}
+h1 > span {
+  position: relative;
+  display: block;
+  background: var(--second-color);
+  transition: 0.5s;
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+h1 span::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+  background: var(--bg-before);
+  transform: 0.5s;
+  transform: skewY(-45deg);
+}
+h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  height: 10px;
+  width: 100%;
+  background: var(--bg-after);
+  transform: 0.5s;
+  transform: skewX(-45deg);
+}
+h1 span:hover {
+  transform: translate(20px, -15px);
+  text-shadow: 0px 0px 10px var(--fc-second);
+}
+
+.sub-title span {
+  font-family: var(--righteous);
+  background-image: linear-gradient(
+    to right,
+    var(--lg-first),
+    var(--lg-second)
+  );
+  background-clip: text;
+  color: transparent;
+}
+/* Title end */
+
+/* Inputs Section start */
+.inputsSection,
+.websites {
+  border: 5px solid var(--fc-first);
+  box-shadow: -5px -5px 10px var(--box-shadow);
+  background-color: var(--second-color) !important;
+}
+.inputsSection i {
+  color: var(--fc-first);
+}
+.inputsSection button {
+  color: var(--fc-first);
+  --bs-btn-border-color: var(--fc-first);
+  --bs-btn-hover-border-color: var(--fc-first);
+  letter-spacing: 1px;
+}
+.inputsSection button:hover {
+  background-color: var(--fc-first);
+  box-shadow: -5px -5px 10px var(--box-shadow);
+  color: #fff;
+}
+/* Inputs Section end */
+
+/* Table Start */
+table thead,
+table tbody tr {
+  border-bottom: 1px solid var(--box-shadow) !important;
+}
+/* Table End */
+
+/* Mode Start */
+#mode {
+  border: none;
+  background-color: #ffffff72;
+  position: fixed;
+  right: 0;
+  top: 20%;
+  z-index: 10;
+}
+.light-mode {
+  --first-color: #f7ecde;
+  --second-color: #e7ddd2;
+  --fc-first: #352e28;
+  --fc-second: #212529;
+  --bg-before: #c2b8af;
+  --bg-after: #9b948b;
+  --box-shadow: rgba(181, 172, 73, 0.7);
+  --lg-first: #44a861;
+  --lg-second: #b5ac49;
+}
+/* Mode End */
