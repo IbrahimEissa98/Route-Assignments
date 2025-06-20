@@ -229,6 +229,7 @@ function parseWebDataToInputs(index) {
   addWebBtn.innerHTML = "Update Website";
   isInUpdateMode = true;
   currentIndex = index;
+  siteNameInput.focus();
 }
 
 // Clear all input fields
@@ -284,4 +285,14 @@ function changeMode() {
     dark.classList.remove("d-block");
     isInLightMode = false;
   }
+}
+
+// Add Event Listener for Enter Key
+var inputs = document.getElementsByClassName("form-control");
+for (var i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener("keyup", function (e) {
+    if (e.key == "Enter") {
+      addWebsite();
+    }
+  });
 }
