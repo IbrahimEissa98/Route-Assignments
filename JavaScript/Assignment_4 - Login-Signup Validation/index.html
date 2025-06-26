@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Sign up Validation</title>
+    <link rel="shortcut icon" href="./images/user.png" type="image/x-icon" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader"><div class="circle"></div></div>
+
+    <section class="container-fluid container-lg min-vh-100 flex-center p-4">
+      <div
+        class="form-container rounded-5 overflow-hidden position-relative flex-center"
+      >
+        <div
+          class="form-box signup-form flex-center flex-column p-4 text-center w-50"
+        >
+          <h2 class="fs-1 fw-bold">Signup</h2>
+          <form class="w-100">
+            <div class="input-box position-relative">
+              <input
+                type="text"
+                class="form-control d-block"
+                id="name"
+                placeholder="Name"
+                name="name"
+              />
+              <div class="icon">
+                <i class="fa-solid fa-user position-absolute"></i>
+              </div>
+              <div class="feedback position-absolute d-none">
+                Username must contains only letters, numbers, _ and . and must
+                be at least 5 characters to be valid
+              </div>
+            </div>
+            <div class="input-box position-relative">
+              <input
+                type="email"
+                class="form-control d-block"
+                id="signupEmail"
+                placeholder="Email"
+                name="email"
+              />
+              <div class="icon">
+                <i class="fa-solid fa-at position-absolute"></i>
+              </div>
+              <div class="feedback position-absolute d-none">
+                Email must be valid
+              </div>
+            </div>
+            <div class="input-box position-relative">
+              <input
+                type="password"
+                class="form-control d-block"
+                id="signupPassword"
+                placeholder="Password"
+                name="password"
+              />
+              <div class="icon">
+                <i class="fa-solid fa-lock position-absolute"></i>
+              </div>
+              <button type="button" class="show-hide d-none p-0 border-0">
+                <i class="fa-solid fa-eye-slash"></i>
+              </button>
+              <div class="feedback position-absolute d-none">
+                Password must contain capital and small letter, digit and symbol
+                must be at least 8 characters to be valid
+              </div>
+            </div>
+            <button
+              type="button"
+              id="signupBtn"
+              class="d-block w-100 py-2 rounded-3 fw-bolder"
+            >
+              Signup
+            </button>
+          </form>
+          <div class="social-icons">
+            <p>or signup with social platforms</p>
+            <ul class="flex-center p-0 gap-3">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-google"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="form-box login-form flex-center flex-column p-4 text-center w-50"
+        >
+          <h2 class="fs-1 fw-bold">Login</h2>
+          <form class="w-100">
+            <div class="input-box position-relative">
+              <input
+                type="email"
+                class="form-control d-block"
+                id="loginEmail"
+                placeholder="Email"
+                name="email"
+              />
+              <div class="icon">
+                <i class="fa-solid fa-at position-absolute"></i>
+              </div>
+              <!-- <div class="feedback position-absolute">
+                Username must contains only letters, numbers, _ and . and must
+                be at least 5 characters to be valid
+              </div> -->
+            </div>
+            <div class="input-box position-relative">
+              <input
+                type="password"
+                class="form-control d-block"
+                id="loginPassword"
+                placeholder="Password"
+                name="password"
+              />
+              <div class="icon">
+                <i class="fa-solid fa-lock position-absolute"></i>
+              </div>
+              <button type="button" class="show-hide d-none p-0 border-0">
+                <i class="fa-solid fa-eye-slash"></i>
+              </button>
+            </div>
+            <div id="loginError" class="m-0 p-0 text-danger"></div>
+            <a href="#" class="d-block">Forgot Password?</a>
+            <button
+              type="button"
+              id="loginBtn"
+              class="d-block w-100 py-2 rounded-3 fw-bolder"
+            >
+              Login
+            </button>
+          </form>
+          <div class="social-icons">
+            <p>or login with social platforms</p>
+            <ul class="flex-center p-0 gap-3">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-google"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Overlay -->
+        <div class="overlay position-absolute p-0 text-white">
+          <div class="panel signup position-absolute text-center">
+            <h3 class="fs-1 fw-bold">Hello, Welcome!</h3>
+            <p>Don't have an account?</p>
+            <button id="swap-signup" class="btn btn-outline-light py-2 px-5">
+              Signup
+            </button>
+          </div>
+          <div class="panel login position-absolute text-center">
+            <h3 class="fs-1 fw-bold">Welcome Back!</h3>
+            <p>Already have an account?</p>
+            <button id="swap-login" class="btn btn-outline-light py-2 px-5">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <a href="./welcom.html">welcome</a>
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 Script -->
+    <script src="./js/sweetalert2@11.js"></script>
+    <!-- Main Script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
