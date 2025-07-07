@@ -237,7 +237,7 @@ function displayCurrentDay(res) {
 
   var data = `<div class="weather-icon w-100">
                 <img
-                  src="${currentDayIcon}"
+                  src="https:${currentDayIcon}"
                   alt="weather icon"
                   class="d-block m-auto"
                 />
@@ -299,7 +299,7 @@ function displayForecastDays(res) {
                       currentDayDate.getDay()
                     )}</p>
                     <img
-                      src="${forecastDay.day.condition.icon}"
+                      src="https:${forecastDay.day.condition.icon}"
                       alt="condition"
                     />
                     <p class="m-0 mt-2">
@@ -389,7 +389,7 @@ function display24Hours(res) {
                         res.forecast.forecastday[day].hour[counter].temp_c
                       )} <sup>&#176;</sup></p>
                       <img
-                        src="${
+                        src="https:${
                           res.forecast.forecastday[day].hour[counter].condition
                             .icon
                         }"
