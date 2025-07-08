@@ -91,6 +91,9 @@ body {
   animation: rotate 1s infinite linear;
   z-index: 2;
 }
+.loader-opacity {
+  opacity: 0;
+}
 
 @-webkit-keyframes rotate {
   0% {
@@ -269,6 +272,18 @@ nav.navbar {
 }
 .search .options .list-group li {
   cursor: pointer;
+}
+.search-top {
+  z-index: 50;
+  position: absolute !important;
+  width: 50%;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.location-error {
+  position: absolute;
+  top: 60px;
 }
 /* .right-sec {
   background-color: var(--second-color);

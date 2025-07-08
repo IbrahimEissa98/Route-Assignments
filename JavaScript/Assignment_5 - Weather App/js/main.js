@@ -1,6 +1,8 @@
 // Loading page
 window.addEventListener("load", function () {
-  document.querySelector("#loader").classList.add("loader-out");
+  document
+    .querySelector("#loader")
+    .classList.add("loader-out", "loader-opacity");
   setTimeout(removeLoader, 1000);
 });
 function removeLoader() {
@@ -18,14 +20,6 @@ function hideLoader2() {
   }, 550);
 }
 showLoader2();
-// ===================================================
-// Get the current location
-// navigator.geolocation;
-// ===================================================
-// Navbar
-var navContainer = document.querySelector("#nav-container");
-var navIcons = Array.from(document.querySelectorAll(".menu-icon"));
-var navPs = Array.from(document.querySelectorAll(".menu-icon p"));
 
 // =============================================================
 var searchInput = document.querySelector("input[type='search']");
@@ -43,7 +37,23 @@ var hours24Container = document.querySelector(".right-sec .hours24 .row");
 
 var latitude;
 var longitude;
-var ip;
+// var ip;
+
+// ===================================================
+// Check Coordinates in localStorage
+function getPrevLocWeather() {
+  if (localStorage.getItem("Coordinates") != null) {
+    Coordinates = JSON.parse(localStorage.getItem("Coordinates"));
+    console.log(Coordinates);
+
+    latitude = Coordinates.lat;
+    longitude = Coordinates.lon;
+    getWeather(latitude, longitude);
+    // console.log(latitude, longitude);
+  }
+}
+
+// ===================================================
 
 async function getWeather(lat, lon) {
   try {
@@ -52,6 +62,8 @@ async function getWeather(lat, lon) {
       `https://api.weatherapi.com/v1/forecast.json?key=7d77b96c972b4d119a3151101212704&q=${lat},${lon}&days=3`
     );
     response = await response.json();
+    searchInput.parentElement.classList.remove("search-top");
+    document.querySelector(".location-error").classList.add("d-none");
     console.log(response);
     // console.log(response.current.last_updated.replace(/\s/, "T"));
     // var date = new Date(response.current.last_updated);
@@ -156,7 +168,8 @@ function chooseOption(places) {
   for (let i = 0; i < options.length; i++) {
     options[i].addEventListener("click", async function (e) {
       var checkedOption = options.indexOf(this);
-
+      searchInput.parentElement.classList.remove("search-top");
+      document.querySelector(".location-error").classList.add("d-none");
       // id = places[checkedOption].id;
       latitude = places[checkedOption].lat;
       longitude = places[checkedOption].lon;
@@ -167,41 +180,80 @@ function chooseOption(places) {
     });
   }
 }
-// -----------------------
 
-// Get Location throw ip
-async function getIP() {
-  try {
-    const response = await fetch("https://api.ipify.org?format=json");
-    const data = await response.json();
-    console.log(`Your IP Address: ${data.ip}`);
-    ip = data.ip;
-  } catch (error) {
-    console.error("Error fetching IP address:", error);
-  }
-}
+// ================================================================
+// navigator.geolocation.getCurrentPosition(
+//   async function (position) {
+//     lat = position.coords.latitude;
+//     lon = position.coords.longitude;
+//     console.log(position);
+//     await getWeather(lat, lon);
+//   },
+//   function (error) {
+//     console.error(error);
+//   }
+// );
+// const x = document.getElementById("demo");
 async function getLocation() {
-  try {
-    const response = await fetch(`http://ip-api.com/json/${ip}`);
-    const data = await response.json();
-    console.log(data);
-    latitude = data.lat;
-    longitude = data.lon;
-  } catch (error) {
-    console.error("Error fetching IP address:", error);
+  if (navigator.geolocation) {
+    await navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    // x.innerHTML = "Geolocation is not supported by this browser.";
   }
 }
-// getLocation();
-// getIP().then(getLocation);
-// console.log(ip);
-async function getFullLocation() {
-  await getIP()
-    .then(getLocation)
-    .then(function () {
-      getWeather(latitude, longitude);
-    });
+getLocation();
+
+async function success(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+  console.log(latitude, longitude);
+  await getWeather(latitude, longitude);
+  let Coordinates = {
+    lat: latitude,
+    lon: longitude,
+  };
+  localStorage.setItem("Coordinates", JSON.stringify(Coordinates));
+  // x.innerHTML =
+  //   "Latitude: " +
+  //   position.coords.latitude +
+  //   "<br>Longitude: " +
+  //   position.coords.longitude;
 }
-getFullLocation();
+
+function error(error) {
+  getPrevLocWeather();
+  searchInput.parentElement.classList.add("search-top");
+  switch (error.code) {
+    case error.PERMISSION_DENIED:
+      console.error(error.message);
+      document.querySelector(
+        ".location-error"
+      ).innerText = `You denied the request for Geolocation \n Please search with city name`;
+      break;
+
+    case error.POSITION_UNAVAILABLE:
+      console.error(error.message);
+      document.querySelector(
+        ".location-error"
+      ).innerText = `Location information is unavailable \n Please search with city name`;
+      break;
+
+    case error.TIMEOUT:
+      console.error(error.message);
+      document.querySelector(
+        ".location-error"
+      ).innerText = `The request to get user location timed out \n Please search with city name`;
+      break;
+
+    case error.UNKNOWN_ERROR:
+      console.error(error.message);
+      document.querySelector(
+        ".location-error"
+      ).innerText = `An unknown error occurred \n Please search with city name`;
+      break;
+  }
+}
+// ================================================================
 
 // ---------------------------
 // Display Weather
@@ -236,6 +288,7 @@ function displayCurrentDay(res) {
   // console.log(currentDayDate);
 
   var data = `<div class="weather-icon w-100">
+                <h3 class="text-center mt-3">${res.location.name}</h3>
                 <img
                   src="https:${currentDayIcon}"
                   alt="weather icon"
