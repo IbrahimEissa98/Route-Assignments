@@ -198,7 +198,9 @@ async function getLocation() {
   if (navigator.geolocation) {
     await navigator.geolocation.getCurrentPosition(success, error);
   } else {
-    // x.innerHTML = "Geolocation is not supported by this browser.";
+    document.querySelector(
+      ".location-error"
+    ).innerText = `Geolocation is not supported by this browser \n Please search with city name`;
   }
 }
 getLocation();
