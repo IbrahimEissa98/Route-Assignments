@@ -1,0 +1,36 @@
+@media (max-width: 767.98px) {
+  .game-details .sub-info p {
+    width: 100%;
+  }
+  .game-details .close-icon {
+    top: 30px;
+    right: 30px;
+  }
+
+  footer form {
+    width: 100%;
+    position: relative;
+  }
+}
+@media (max-width: 991.98px) {
+  /* # Main Poster Start */
+  .main-poster {
+    height: 150px;
+  }
+  .main-poster .inner {
+    height: 150px;
+    width: 120%;
+    margin-left: -10%;
+  }
+  /* # Main Poster End */
+
+  /* Nav Start */
+  nav.navbar {
+    z-index: 100;
+    font-family: var(--michroma);
+  }
+  .navbar .nav-item {
+    text-align: center;
+  }
+  /* Nav End */
+}
