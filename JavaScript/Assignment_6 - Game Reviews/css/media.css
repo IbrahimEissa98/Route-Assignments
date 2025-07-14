@@ -1,7 +1,7 @@
 @media (max-width: 767.98px) {
-  .game-details .sub-info p {
+  /* .game-details .sub-info p {
     width: 100%;
-  }
+  } */
   .game-details .close-icon {
     top: 30px;
     right: 30px;
@@ -26,7 +26,6 @@
 
   /* Nav Start */
   nav.navbar {
-    z-index: 100;
     font-family: var(--michroma);
   }
   .navbar .nav-item {

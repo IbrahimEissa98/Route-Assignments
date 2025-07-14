@@ -298,7 +298,10 @@ nav.navbar {
   --bs-table-bg: transparent;
 }
 .game-details .sub-info p {
-  width: 50%;
+  font-size: 13px;
+}
+.game-details .sub-info span {
+  font-size: 14px;
 }
 .game-details .close-icon {
   position: absolute;

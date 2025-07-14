@@ -90,41 +90,57 @@ export default class DisplayUi {
                   data.title
                 }
               </h3>
-              <div class="sub-info d-flex flex-wrap my-4">
-              <table class="table table-borderless">
-                  <tbody>
-                    <tr>
-                      <th class="text-white-50 px-0" scope="row">Release Date:</th>
-                      <td><span class="text-white bg-primary rounded-2 px-2 py-1"
-                    >${data.release_date}</span
-                  ></td>
-                      <th class="text-white-50 px-0">Category:</th>
-                      <td><span class="text-white bg-primary rounded-2 px-2 py-1"
-                    >${data.genre}</span
-                  ></td>
-                    </tr>
-                    <tr>
-                      <th class="text-white-50 px-0" scope="row">Platform:</th>
-                      <td><span class="text-white bg-primary rounded-2 px-2 py-1"
-                    >${data.platform}</span
-                  ></td>
-                      <th class="text-white-50 px-0">Status:</t>
-                      <td><span class="text-white bg-primary rounded-2 px-2 py-1"
-                    >${data.status}</span
-                  ></td>
-                    </tr>
-                    <tr>
-                      <th class="text-white-50 px-0" scope="row">Developer:</th>
-                      <td><span class="text-white bg-primary rounded-2 px-2 py-1"
-                    >${data.developer}</span
-                  ></td>
-                      <th class="text-white-50 px-0">Publisher:</th>
-                      <td><span class="text-white bg-primary rounded-2 px-2 py-1"
-                    >${data.publisher}</span
-                  ></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="sub-info my-4">
+              <div class="row g-3">
+                  <div class="col-4 col-md-2">
+                    <p class="text-white-50 m-0">Release Date:</p>
+                  </div>
+                  <div class="col-8 col-md-4">
+                    <span class="text-white bg-primary rounded-2 px-2 py-1"
+                      >${data.release_date}</span
+                    >
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <p class="text-white-50 m-0">Category:</p>
+                  </div>
+                  <div class="col-8 col-md-4">
+                    <span class="text-white bg-primary rounded-2 px-2 py-1"
+                      >${data.genre}</span
+                    >
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <p class="text-white-50 m-0">Platform:</p>
+                  </div>
+                  <div class="col-8 col-md-4">
+                    <span class="text-white bg-primary rounded-2 px-2 py-1"
+                      >${data.platform}</span
+                    >
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <p class="text-white-50 m-0">Status:</p>
+                  </div>
+                  <div class="col-8 col-md-4">
+                    <span class="text-white bg-primary rounded-2 px-2 py-1"
+                      >${data.status}</span
+                    >
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <p class="text-white-50 m-0">Developer:</p>
+                  </div>
+                  <div class="col-8 col-md-4">
+                    <span class="text-white bg-primary rounded-2 px-2 py-1"
+                      >${data.developer}</span
+                    >
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <p class="text-white-50 m-0">Publisher:</p>
+                  </div>
+                  <div class="col-8 col-md-4">
+                    <span class="text-white bg-primary rounded-2 px-2 py-1"
+                      >${data.publisher}</span
+                    >
+                  </div>
+                </div>
               </div>
               <p class="description">
                 ${data.description}
