@@ -8,10 +8,11 @@ export default class Loader {
     this.loader.classList.remove("d-none");
   }
   hideLoader() {
-    // setTimeout(this.loader.classList.add("loader-opacity"), 1000);
+    setTimeout(this.loader.classList.add("loader-opacity"), 500);
     setTimeout(this.removeLoader, 1000);
   }
   removeLoader() {
+    this.loader.style.opacity = "1";
     this.loader.classList.add("d-none");
   }
 }

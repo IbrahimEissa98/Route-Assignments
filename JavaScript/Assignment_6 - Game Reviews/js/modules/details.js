@@ -11,7 +11,7 @@ export default class Details {
 
   async getApiGameDetails(id) {
     this.loader.showLoader();
-    // document.getElementById("loader").classList.remove("d-none");
+    document.body.classList.add("overflow-y-hidden");
     const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
     const options = {
       method: "GET",
@@ -38,10 +38,12 @@ export default class Details {
       .querySelector(".game-details .close-icon")
       .addEventListener("click", () => {
         document.querySelector(".game-details").classList.add("d-none");
+        document.body.classList.remove("overflow-y-hidden");
       });
     window.addEventListener("keyup", (e) => {
       if (e.key == "Escape") {
         document.querySelector(".game-details").classList.add("d-none");
+        document.body.classList.remove("overflow-y-hidden");
       }
     });
   }
